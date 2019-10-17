@@ -2,15 +2,15 @@ import React, { useState } from 'react';
 import './App.css';
 
 function App() {
-  const [tm, setTM] = useState({name: "", email: "", role: ""});
+  const [teamMember, setTeamMember] = useState({name: "", email: "", role: ""});
 
   const handleChange = event => {
-    setTM({...tm, [event.target.name]: event.target.value});
+    setTeamMember({...tm, [event.target.name]: event.target.value});
   };
 
   const handleSubmit = event => {
     event.preventDefault();
-    setTM({name: "", email: "", role: ""})
+    setTeamMember({name: "", email: "", role: ""})
   };
 
   return (
