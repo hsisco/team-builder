@@ -1,19 +1,11 @@
 import React, { useState } from 'react';
 import { Route } from 'react-router-dom';
+import Form from './Form';
 
 import './App.css';
 
 function App() {
-  const [teamMember, setTeamMember] = useState({name: "", email: "", role: ""});
-
-  const handleChange = event => {
-    setTeamMember({...teamMember, [event.target.name]: event.target.value});
-  };
-
-  const handleSubmit = event => {
-    event.preventDefault();
-    setTeamMember({name: "", email: "", role: ""})
-  };
+  const [team, setTeam] = useState("");
 
   return (
     <div className="App">
