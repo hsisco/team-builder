@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 
 const Form = props => {
-  console.log("The props going into Form", props)
   const [teamMember, setTeamMember] = useState({name: "", email: "", role: ""});
+  console.log("The props going into Form", props)
 
   const handleChange = event => {
     setTeamMember({...teamMember, [event.target.name]: event.target.value});
-    console.log(teamMember);
+    console.log("This is the new team", teamMember);
   };
 
   const handleSubmit = event => {
