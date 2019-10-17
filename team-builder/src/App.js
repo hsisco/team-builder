@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { Route } from 'react-router-dom';
+
 import './App.css';
 
 function App() {
@@ -15,6 +17,7 @@ function App() {
 
   return (
     <div className="App">
+      <Route exact path="/" component={Form} />
 
     </div>
   );
