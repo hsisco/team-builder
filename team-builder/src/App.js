@@ -9,8 +9,7 @@ function App() {
 
   return (
     <div className="App">
-      <Route exact path="/" component={Form} />
-
+      <Route exact path="/" render={props=> <Form {...props}/>} />
     </div>
   );
 }

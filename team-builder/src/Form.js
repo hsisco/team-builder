@@ -11,7 +11,7 @@ const Form = props => {
     event.preventDefault();
     setTeamMember({name: "", email: "", role: ""})
   };
-  
+
   return (
     <div className="Form">
       <form onSubmit={event => handleSubmit(event)}>
@@ -39,6 +39,7 @@ const Form = props => {
           value={teamMember.role}
           onChange={event => handleChange(event)} />
         </label>
+        <button>Submit</button>
       </form>
     </div>
   );
