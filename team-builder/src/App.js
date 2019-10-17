@@ -21,7 +21,7 @@ function App() {
       <h3>Welcome to the Team!</h3>
       <Form newMember={newMember} />
       <h2>Our Team</h2>
-      <Route path="/Card" render={props => <Card {...props}/>} />
+      <Route path="./components/Card.js" render={props => <Card {...props}/>} />
     </div>
   );
 }
