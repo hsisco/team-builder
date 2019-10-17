@@ -5,7 +5,7 @@ function App() {
   const [teamMember, setTeamMember] = useState({name: "", email: "", role: ""});
 
   const handleChange = event => {
-    setTeamMember({...tm, [event.target.name]: event.target.value});
+    setTeamMember({...teamMember, [event.target.name]: event.target.value});
   };
 
   const handleSubmit = event => {
