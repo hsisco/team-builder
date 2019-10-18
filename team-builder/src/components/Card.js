@@ -1,22 +1,19 @@
 import React, { useState } from 'react';
 
 
-const Card = props => {
-  const [employee, setEmployee] = useState();
-  
-  console.log("This is the employee card", setEmployee);
+const Card = props => {  
   return (
     <div className="card-content">
-      {employee.map(person => (
-        <EmployeeDetails key={person.name} />
+      {props.team.map(person => (
+        <EmployeeDetails key={person.name} person={person} />
       ))}
     </div>
   );
 }
 
-function EmployeeDetails({ person }) {
-  const { name, email, role } = person;
-  console.log(person);
+function EmployeeDetails( props ) {
+  const { name, email, role } = props.person;
+  console.log(props.person);
   return (
     <div className="employee-card">
       <h2>{name}</h2>

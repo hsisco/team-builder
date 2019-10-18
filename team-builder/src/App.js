@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Route } from 'react-router-dom';
+// import { Route } from 'react-router-dom';
 import Form from './components/Form';
 import Card from './components/Card';
 
@@ -12,16 +12,12 @@ function App() {
     // role: "Data Scientist"}
   ]);
 
-  const newMember = note => {
-    setTeam([...team, note])
-  }
-
   return (
     <div className="App">
       <h3>Welcome to the Team!</h3>
-      <Form newMember={newMember} />
+      <Form team={team}  setTeam={setTeam}/>
       <h2>Our Team</h2>
-      <Route path="./components/Card.js" render={props => <Card {...props}/>} />
+      <Card team={team}/>
     </div>
   );
 }
