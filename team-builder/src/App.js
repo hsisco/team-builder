@@ -6,11 +6,7 @@ import Card from './components/Card';
 import './App.css';
 
 function App() {
-  const [team, setTeam] = useState([
-    // {name: "Hana",
-    // email: "hana@gmail.com",
-    // role: "Data Scientist"}
-  ]);
+  const [team, setTeam] = useState([]);
 
   return (
     <div className="App">

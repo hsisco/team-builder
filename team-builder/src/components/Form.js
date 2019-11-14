@@ -12,7 +12,7 @@ const Form = props => {
   const handleSubmit = event => {
     event.preventDefault();
     props.setTeam([...props.team, teamMember]);
-    setTeamMember({name: "", email: "", role: ""})
+    setTeamMember({name: "", email: "", role: ""});
   };
 
   return (
